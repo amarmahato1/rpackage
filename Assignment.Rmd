@@ -98,7 +98,7 @@ plot(X[,"X3"],Y,main = "Plotting X3 against Y", xlab = "X3 signal", ylab = "Outp
 signal", col = "green")
 # Plotting X4 against Y
 plot(X[,"X4"],Y,main = "Plotting X4 against Y", xlab = "X4 signal", ylab = "Output
-signal", col = "yellow")
+signal", col = "orange")
 
 ```
 
@@ -406,6 +406,7 @@ C_I2
 
 
 ```{r}
+#Error Bar
 StandardDeviation = sqrt(model2_v)
 data_frame_to_plot = data.frame(
   XAxis_Value = X_model2,
@@ -425,11 +426,11 @@ ggplot(data_frame_to_plot) +
 
 ggplot(data_frame_to_plot) +
   geom_bar( aes(x=XAxis_Value.3, y=Y), stat="identity", fill="skyblue", alpha=0.7) +
-  geom_errorbar( aes(x=XAxis_Value.3, ymin=Y-StandardDeviation, ymax=Y+StandardDeviation), width=0.4, colour="red", alpha=0.9, linewidth=1.3)
+  geom_errorbar( aes(x=XAxis_Value.3, ymin=Y-StandardDeviation, ymax=Y+StandardDeviation), width=0.4, colour="orange", alpha=0.9, linewidth=1.3)
 
 ggplot(data_frame_to_plot) +
   geom_bar( aes(x=XAxis_Value.4, y=Y), stat="identity", fill="skyblue", alpha=0.7) +
-  geom_errorbar( aes(x=XAxis_Value.4, ymin=Y-StandardDeviation, ymax=Y+StandardDeviation), width=0.4, colour="red", alpha=0.9, linewidth=1.3)
+  geom_errorbar( aes(x=XAxis_Value.4, ymin=Y-StandardDeviation, ymax=Y+StandardDeviation), width=0.4, colour="black", alpha=0.9, linewidth=1.3)
 ```
 
 `
